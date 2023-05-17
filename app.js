@@ -1,43 +1,21 @@
+// function onButtonClick(event) {
+//   console.log('button click')
+//   event.preventDefault();
+//   event.stopPropagation();
+// }
+
+// document.querySelectorAll('button, a').forEach(button => {
+// button.addEventListener('click', onButtonClick)
+// });
+
+// document.querySelector('div').addEventListener('click', () =>
+//   console.log('click div')
+// )
+
 // Exercice :
-function createArticle(post) {
-  const article = document.createElement('article');
-  article.innerHTML = `
-    <h2>${post.title}</h2>
-    <p>${post.body}</p>
-  `
-  return article
-}
 
-async function main() {
-  const wrapper = document.querySelector('#lastPosts');
-  const loader = document.createElement('p');
-  loader.innerText = "Chargement..."
-  wrapper.append(loader)
-  try {
-      const r = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5', {
-        headers: {
-          Accept: 'application/json'
-      }
+document.querySelectorAll('.spoiler').forEach(spoiler =>
+  spoiler.addEventListener('click', e => {
+    spoiler.style.backgroundColor = 'white'
   })
-      if (!r.ok) {
-        throw new Error('Erreur serveur')
-      }
-
-      const posts = await r.json()
-      loader.remove()
-      for (let post of posts) {
-        wrapper.append(createArticle(post))
-      }
-
-  } catch (e) {
-      loader.innerText = "Impossible de charger les articles "
-      loader.style.color = "red"
-      return
-  }
-}
-
-main()
-
-
-// const posts = await r.json
-// loader.remove()
+);
