@@ -7,13 +7,38 @@
   <title>Document</title>
   <script src="./app.js" type="module"></script>
   <style>
-    .red {
-      color: red;
+    /* div {
+      width: 100px;
+      height: 100px;
+      background-color: grey;
+    } */
+
+    .spoiler {
+      background-color: black;
+      color: black;
+      cursor: pointer;
+    }
+
+    .spoiler::selection {
+      color: black;
+    }
+    span {
+      transition: 0.5s;
     }
   </style>
 </head>
 <body>
-  <div id="lastPosts">
+  <!-- debut cour -->
+  <!-- <div>
+    <button>Bonjour</button>
   </div>
+  <button>Bonjour les gens</button>
+  <a href="https://grafikart.fr">Grafikart</a> -->
+  <!-- fin du cour -->
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, iusto amet laudantium similique, autem, earum porro vel perferendis deleniti voluptatibus vero nam hic. Alias quae omnis iste delectus, similique animi?
+    <span class="spoiler"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span> Vitae dolores rerum totam modi fugit consequuntur eveniet similique dignissimos ut perferendis esse aspernatur adipisci provident error eius ab ipsam, commodi sit.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="spoiler"> Eveniet magnam, unde facere ab ipsum error </span> voluptatem soluta facilis sed inventore, autem eos praesentium rem suscipit perferendis commodi molestiae eligendi molestias.
+  </p>
 </body>
 </html>
